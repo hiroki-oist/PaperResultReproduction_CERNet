@@ -1,0 +1,35 @@
+[dataset]
+dataset_path = "Data/train_data_26_100_3.npy"
+batch_size = 1
+
+[training]
+causes_dim = 26
+states_dim = [ 300]
+output_dim = 3
+tau_h = [ 10]
+alpha_x = 0.01
+alpha_h = [ 0.05]
+iterations = 10000
+save_directory =  "Data/models/SingleLarge/train/"
+save_every_n_iteration = 100
+
+[training.lr]
+lr_o = 0.01
+lr_h = [ 0.005]
+lr_c = 0.005
+
+[onlineER]
+model_type   = "pcrnn"
+model_path   = "Data/models/SingleLarge/train/seed1/iteration_10000/snapshot.pkl"
+host         = "10.42.0.2"    
+fps          = 20             
+class_id     = 16            
+use_feedback = true            
+gripper_deg  = 10.0    
+SequenceGeneration_save_directory = "Data/exp1_SequenceGeneration/SingleLarge/"
+alpha_x = 0.01
+alpha_h = [ 0.05]
+
+[inferLetter]
+alpha_x = 0.01
+alpha_h = [ 40.0]

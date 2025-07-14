@@ -1,0 +1,5 @@
+Data_old/
+.venv/
+tmp_autogen_configs/
+__pycache__/
+.DS_Store
