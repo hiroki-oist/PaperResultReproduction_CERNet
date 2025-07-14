@@ -27,7 +27,7 @@ source .venv/bin/activate        # For macOS/Linux
 # OR
 .venv\Scripts\activate           # For Windows
 
-pip install -r requirements.txt  # (Assumes pip-based env. If using conda, adapt accordingly.)
+pip install --no-deps -r requirements.txt  # (Assumes pip-based env. If using conda, adapt accordingly.)
 cd Code
 ```
 
